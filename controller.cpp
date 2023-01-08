@@ -99,7 +99,9 @@ operation* controller::createOperation(operationType OpType)
 		case REDO:
 			pOp = new OpRedo(this);
 			break;
-
+		case SEND_BACK:
+			pOp = new opSendBack(this);
+			break;
 		case ZOOM:
 			pOp = new OpZoom(this);
 			break;
@@ -130,9 +132,6 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case PENWIDTH :
 			pOp = new opPenwidth(this);
-			break;
-		case SEND_BACK:
-			pOp = new opSendBack(this);
 			break;
 
 		case DRAWING_AREA:

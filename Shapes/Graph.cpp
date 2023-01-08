@@ -334,6 +334,9 @@ void Graph::AddModifiedShape(shape* pShp, bool s)
 
 void Graph::SendBack(shape* pFig)
 {
+	shape* S = pFig->Copy();
+	DeleteShape(pFig);
+	shapesList.insert(shapesList.begin(), pFig);
 }
 bool Graph::UnHideone(int x, int y, GUI* pGUI)
 {

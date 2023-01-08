@@ -46,6 +46,7 @@ enum operationType //The operations supported (you can add more if needed) //Arr
 	PEN,
 	STICK,
 	SWITCH ,
+	
 	BORDER_WIDTH ,
 	DUPLICATE_GRAPH,
 	HIDE_GRAPH,
