@@ -97,7 +97,7 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new oPUndo(this);
 			break;
 		case REDO:
-			pOp = new oPUndo(this);
+			pOp = new OpRedo(this);
 			break;
 
 		case ZOOM:

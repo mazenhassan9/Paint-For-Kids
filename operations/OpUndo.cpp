@@ -62,7 +62,7 @@ void oPUndo::Execute()
 			if (S1)
 			{
 				pGr->Addshape(S1);
-				pGr->AddDeletedShapeUndo(S1->Copy(), true);
+				pGr->AddModifiedShapeUndo(S1, true);
 				pUI->PrintMessage("Undo Done");
 			}
 			S1 = nullptr;

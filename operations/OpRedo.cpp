@@ -22,8 +22,7 @@ void OpRedo::Execute()
 	vector<shape*> Shapes = pGr->getlistofshspes();
 	shape* S1;
 	pUI->PrintMessage("Redo Seleceted");
-	
-		if (uOp)
+		if (uOp>=0)
 		{
 			pGr->AddOperation(uOp);
 			if (uOp >= 0 && uOp < 8) //Draw Images
@@ -58,11 +57,13 @@ void OpRedo::Execute()
 			}
 			else if (uOp == 13) //Deleted
 			{
-				S1 = pGr->GetLastDeletedUndo();
+				S1 = pGr->GetLastModifiedUndo();
 				if (S1)
 				{
-					pGr->Addshape(S1);
-					pUI->PrintMessage("Redo Add Done");
+					pGr->AddDeletedShape(S1->Copy(), true);
+					pGr->DeleteShape(S1);
+					
+					pUI->PrintMessage("Redo Delete Done");
 				}
 			}
 
