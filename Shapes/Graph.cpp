@@ -464,6 +464,42 @@ int Graph::matchshapes()
 	return match;
 }
 
+void Graph::AddOperationUndo(operationType op)
+{
+	UndoOperations.push_back(op);
+}
+
+operationType Graph::GetLastUndo()
+{
+	operationType r = UndoOperations.back();
+	UndoOperations.pop_back();
+	return r;
+}
+
+shape* Graph::GetLastDeletedUndo()
+{
+	shape* S = deletedShapesUndo.back();
+	deletedShapesUndo.pop_back();
+	return S;
+}
+
+shape* Graph::GetLastModifiedUndo()
+{
+	shape* S = modifiedShapesUndo.back();
+	modifiedShapesUndo.pop_back();
+	return S;
+}
+
+void Graph::AddDeletedShapeUndo(shape* pShp, bool s)
+{
+	deletedShapesUndo.push_back(pShp);
+}
+
+void Graph::AddModifiedShapeUndo(shape* pShp, bool s)
+{
+	modifiedShapesUndo.push_back(pShp);
+}
+
 
 
 

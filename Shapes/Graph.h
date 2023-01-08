@@ -20,6 +20,9 @@ private:
 	vector<operationType> operations; 
 	shape* copiedshape;
 	vector<shape*>deletedShapes, modifiedShapes; 
+	//undo variables
+	vector<operationType> UndoOperations;
+	vector<shape*>deletedShapesUndo, modifiedShapesUndo;
 	
 public:										
 	Graph();
@@ -52,4 +55,11 @@ public:
 	void DuplicateGraph();
 	bool UnHideone(int x, int y, GUI* pGUI);
 	int matchshapes();
+	//Redo Functions
+	void AddOperationUndo(operationType op);
+	operationType GetLastUndo();
+	shape* GetLastDeletedUndo();	//shapes before deleted.
+	shape* GetLastModifiedUndo();
+	void AddDeletedShapeUndo(shape* pShp, bool s);
+	void AddModifiedShapeUndo(shape* pShp, bool s);
 };

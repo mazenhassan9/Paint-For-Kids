@@ -34,7 +34,7 @@
 #include"opDublicateGraph.h"
 #include"operations/opHideGraph.h"
 #include"operations/OpUndo.h"
-
+#include"operations/OpRedo.h"
 //Constructor
 controller::controller()
 {
@@ -94,6 +94,9 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opChangeBorderColor(this);
 			break;
 		case UNDO:
+			pOp = new oPUndo(this);
+			break;
+		case REDO:
 			pOp = new oPUndo(this);
 			break;
 
