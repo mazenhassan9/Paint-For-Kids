@@ -189,6 +189,7 @@
     <ClCompile Include="operations\opPaste.cpp" />
     <ClCompile Include="operations\opPenwidth.cpp" />
     <ClCompile Include="operations\OpRedo.cpp" />
+    <ClCompile Include="operations\OpRestart.cpp" />
     <ClCompile Include="operations\OpRotate.cpp" />
     <ClCompile Include="operations\opSave.cpp" />
     <ClCompile Include="operations\opSelect.cpp" />
@@ -260,6 +261,7 @@
     <ClInclude Include="operations\opPaste.h" />
     <ClInclude Include="operations\opPenwidth.h" />
     <ClInclude Include="operations\OpRedo.h" />
+    <ClInclude Include="operations\OpRestart.h" />
     <ClInclude Include="operations\OpRotate.h" />
     <ClInclude Include="operations\opSave.h" />
     <ClInclude Include="operations\opSelect.h" />

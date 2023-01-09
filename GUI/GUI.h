@@ -95,7 +95,7 @@ class GUI
 
 		//TODO: Add more icons names here
 		PLAY_ICON_START,
-
+		PLAY_ICON_RESTART,
 
 		PLAY_ICON_SWITCH,
 		PLAY_ICON_EXIT,//Note: Icons are ordered here as they appear in menu

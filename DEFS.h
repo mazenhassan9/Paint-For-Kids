@@ -58,6 +58,7 @@ enum operationType //The operations supported (you can add more if needed) //Arr
 	EMPTY,			//A click on empty place in the toolbar
 	TO_DRAW,		//Switch interface to Draw mode
 	TO_PLAY	,		//Switch interface to Play mode
+	RESTART,
 
 	///TODO: Add more operation types (if needed)
 };

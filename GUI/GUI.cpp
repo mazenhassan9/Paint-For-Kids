@@ -179,6 +179,7 @@ operationType GUI::GetUseroperation() const
 			switch (ClickedIconOrder)
 			{
 			case PLAY_ICON_START: return TO_PLAY;
+			case PLAY_ICON_RESTART: return RESTART;
 			case PLAY_ICON_SWITCH: return SWITCH;
 			case PLAY_ICON_EXIT: return EXIT;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
@@ -348,6 +349,7 @@ void GUI::CreatePlayToolBar()
 	
 	
 	MenuItemImages[PLAY_ICON_START] = "images\\MenuIcons\\start.jpg";
+	MenuItemImages[PLAY_ICON_RESTART]= "images\\MenuIcons\\restart.jpg";
 	MenuItemImages[PLAY_ICON_SWITCH] = "images\\MenuIcons\\SWITCH.JPG";
 	MenuItemImages[PLAY_ICON_EXIT] = "images\\MenuIcons\\Menu_Exit.jpg";
 

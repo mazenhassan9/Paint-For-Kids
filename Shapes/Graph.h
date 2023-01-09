@@ -57,6 +57,7 @@ public:
 	void ScrambleGraph();
 	bool UnHideone(int x, int y, GUI* pGUI);
 	int matchshapes();
+	void resetscore();
 	int getscore() const;
 	//Redo Functions
 	void AddOperationUndo(operationType op);

@@ -33,6 +33,7 @@
 #include "operations/opSendBack.h"
 #include"operations/OpUndo.h"
 #include"operations/OpRedo.h"
+#include"operations/OpRestart.h"
 //Constructor
 controller::controller()
 {
@@ -163,6 +164,9 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case STICK:
 			pOp = new opStickimage(this);
+			break;
+		case RESTART:
+			pOp = new OpRestart(this);
 			break;
 		
 

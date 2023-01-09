@@ -416,7 +416,7 @@ void Graph::ScrambleGraph()
 		if (intx >= maxwidth)
 		{
 			intx = 200;
-			inty += 100;
+			inty += 150;
 		}
 		else {
 			intx += 100;
@@ -494,6 +494,12 @@ int Graph::matchshapes()
 	}
 	return match;
 }
+
+void Graph::resetscore()
+{
+	score = 0;
+}
+
 int Graph::getscore() const
 {
 	
