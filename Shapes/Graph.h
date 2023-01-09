@@ -23,6 +23,7 @@ private:
 	//undo variables
 	vector<operationType> UndoOperations;
 	vector<shape*>deletedShapesUndo, modifiedShapesUndo;
+	int score = 0;
 	
 public:										
 	Graph();
@@ -56,9 +57,10 @@ public:
 	void ScrambleGraph();
 	bool UnHideone(int x, int y, GUI* pGUI);
 	int matchshapes();
-
+	int getscore() const;
 	//Redo Functions
 	void AddOperationUndo(operationType op);
+	void isalldone(GUI* pUI);
 	operationType GetLastUndo();
 	shape* GetLastDeletedUndo();	//shapes before deleted.
 	shape* GetLastModifiedUndo();

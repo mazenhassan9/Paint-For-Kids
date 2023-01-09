@@ -482,6 +482,7 @@ int Graph::matchshapes()
 				shapesList.erase(loc2);
 				delete sh1, sh2;
 				match = 1;
+				score++;
 			}
 		}
 
@@ -492,6 +493,11 @@ int Graph::matchshapes()
 		}
 	}
 	return match;
+}
+int Graph::getscore() const
+{
+	
+	return score;
 }
 
 void Graph::AddOperationUndo(operationType op)
@@ -530,6 +536,15 @@ void Graph::AddModifiedShapeUndo(shape* pShp, bool s)
 	modifiedShapesUndo.push_back(pShp);
 }
 
+void Graph::isalldone(GUI* pUI)
+{
+	int sx = 100;
+	int sy = 750;
+	int Img_width = 62, Img_Height = 100;
+	if (shapesList.empty())
+		pUI->DrawImg("images\\card.jpg", sx, sy, Img_width, Img_Height);
+
+}
 
 
 
