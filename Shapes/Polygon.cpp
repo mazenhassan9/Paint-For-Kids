@@ -62,7 +62,8 @@ void polygon::stick(GUI* pUI) const
 				height = sqrt(pow((Corners[i].y - Corners[j].y), 2));
 		}
 	}
-
+	string img = "images\\stick_images\\poly.jpg";
+	pUI->DrawImg(img, x, y, width, height);
 
 }
 

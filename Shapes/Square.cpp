@@ -38,7 +38,7 @@ void Square::Draw(GUI* pUI) const
 
 void Square::stick(GUI* pUI) const
 {
-	string img = "images\\MenuIcons\\Menu_SQUARE.jpg";
+	string img = "images\\stick_images\\square.jpg";
 	pUI->DrawImg(img, origin.x, origin.y, sidelent, sidelent);
 }
 

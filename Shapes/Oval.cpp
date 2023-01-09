@@ -44,7 +44,7 @@ void Oval::stick(GUI* pUI) const
 	int y = min(P1.y, P2.y);
 	int width = sqrt(pow((P2.x - P1.x), 2));
 	int height = sqrt(pow((P2.y - P1.y), 2));
-	string img = "images\\MenuIcons\\Menu_Oval.jpg";
+	string img = "images\\stick_images\\oval.jpg";
 	pUI->DrawImg(img, x, y, width, height);
 	
 }

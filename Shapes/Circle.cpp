@@ -42,7 +42,7 @@ void Circle::stick(GUI* pUI) const
 {
 	int x = center.x - radius;
 	int y = center.y - radius;
-	string img = "images\\MenuIcons\\Menu_Circle.jpg";
+	string img = "images\\stick_images\\circle.jpg";
 	pUI->DrawImg(img,x,y,(2*radius),(2*radius));
 	
 }

@@ -56,7 +56,7 @@ void Triangle::stick(GUI* pUI) const
 	height = max(max(height1,height2),height3);
 	x = min(min(Corner1.x, Corner2.x),Corner3.x);
 	y = min(min(Corner1.y, Corner2.y), Corner3.y);
-	string img = "images\\MenuIcons\\Menu_Tri.jpg";
+	string img = "images\\stick_images\\Tri.jpg";
 	pUI->DrawImg(img, x, y, width+1, height+1);
 }
 

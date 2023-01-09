@@ -46,7 +46,7 @@ void Rect::stick(GUI* pUI) const
 	int y = min(Corner1.y, Corner2.y);
 	int width = sqrt(pow((Corner2.x - Corner1.x), 2));
 	int height = sqrt(pow((Corner2.y - Corner1.y), 2));
-	string img = "images\\MenuIcons\\Menu_Rect.jpg";
+	string img = "images\\stick_images\\Rect.jpg";
 	pUI->DrawImg(img, x, y, width, height);
 }
 
