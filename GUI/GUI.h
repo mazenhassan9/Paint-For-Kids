@@ -72,7 +72,7 @@ class GUI
 		ICON_SENDTOBACK,
 		ICON_GROUP,
 		ICON_UNGROUOP,
-		ICON_DUPLICATE,
+		
 		ICON_SWITCH,
 		
 		
@@ -94,10 +94,7 @@ class GUI
 	{
 
 		//TODO: Add more icons names here
-		PLAY_ICON_FIGCOLOR,
-		PLAY_ICON_BACKDRAW,
-		PLAY_ICON_HIDE,
-
+		PLAY_ICON_START,
 
 
 		PLAY_ICON_SWITCH,

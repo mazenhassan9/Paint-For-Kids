@@ -220,6 +220,5 @@ void Triangle::mapshape(GUI* pUI)
 	pUI->Mapy(Corner3.y);
 }
 
-void Triangle::DuplicateGraph(){}
 
 

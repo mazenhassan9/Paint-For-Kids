@@ -391,9 +391,36 @@ void Graph::mapshapes(GUI* pUI)
 
 
 void Graph::DuplicateGraph() {
+	vector<shape*> Copied;
 	for (auto& itr : shapesList)
 	{
-		itr->DuplicateGraph();
+		Copied.push_back(itr->Copy());
+	}
+	for (auto& itr : Copied)
+	{
+		shapesList.push_back(itr);
+	}
+	
+	
+}
+
+void Graph::ScrambleGraph()
+{
+	int maxwidth = 1000;
+	int maxheight = 500;
+
+	int intx = 200, inty = 200;
+	for (auto& itr : shapesList)
+	{
+		itr->Move(intx, inty);
+		if (intx >= maxwidth)
+		{
+			intx = 200;
+			inty += 100;
+		}
+		else {
+			intx += 100;
+		}
 	}
 }
 

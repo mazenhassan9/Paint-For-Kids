@@ -185,9 +185,7 @@ void Circle::mapshape(GUI* pUI)
 
 
 
-void Circle::DuplicateGraph() {
 
-}
 
 Point Circle::GetFirstPoint() const
 {

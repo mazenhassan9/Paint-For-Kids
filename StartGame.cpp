@@ -15,6 +15,10 @@ void StartGame::Execute()
 {
 
 	GUI* pUI = pControl->GetUI();
-	pUI->CreatePlayToolBar();
-	pUI->GetUseroperation();
+	Graph* pGr = pControl->getGraph();
+	pUI->PrintMessage("Starting Game");
+	pGr->DuplicateGraph();
+	pGr->ScrambleGraph();
+	pGr->HideAll(true);
+
 }

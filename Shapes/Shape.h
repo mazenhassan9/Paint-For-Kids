@@ -56,5 +56,5 @@ public:
 	virtual void RESIZE(double size) = 0;
 	void Hide(bool s);					
 	bool HiddenItems();
-	virtual void DuplicateGraph()=0;
+	
 };

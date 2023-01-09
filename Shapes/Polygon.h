@@ -30,5 +30,4 @@ public:
 
 	bool isIntersect(line l1, line l2)const;
 	virtual void mapshape(GUI* pUI);
-	virtual void DuplicateGraph();
 };

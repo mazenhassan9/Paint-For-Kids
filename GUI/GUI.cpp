@@ -150,7 +150,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_Load: return LOAD;
 			case ICON_SENDTOBACK: return SEND_BACK;
 			case ICON_Single_Fill: return CHNG_S_FILL_CLR;
-			case ICON_DUPLICATE: return DUPLICATE_GRAPH;
+
 			case ICON_SWITCH: return SWITCH;
 			case ICON_EXIT: return EXIT;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
@@ -178,9 +178,8 @@ operationType GUI::GetUseroperation() const
 		
 			switch (ClickedIconOrder)
 			{
-			
+			case PLAY_ICON_START: return TO_PLAY;
 			case PLAY_ICON_SWITCH: return SWITCH;
-			case PLAY_ICON_HIDE:	return HIDE_GRAPH;
 			case PLAY_ICON_EXIT: return EXIT;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -317,7 +316,6 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_Single_Fill] = "images\\MenuIcons\\Menu_Single_Fill_color.jpg";
 	MenuIconImages[ICON_GROUP] = "images\\MenuIcons\\group.jpg";
 	MenuIconImages[ICON_UNGROUOP] = "images\\MenuIcons\\ungroup.jpg";
-	MenuIconImages[ICON_DUPLICATE]= "images\\MenuIcons\\Duplicate.jpg";
 	MenuIconImages[ICON_SWITCH] = "images\\MenuIcons\\SWITCH.JPG";
 	MenuIconImages[ICON_EXIT] = "images\\MenuIcons\\Menu_Exit.jpg";
 
@@ -349,9 +347,7 @@ void GUI::CreatePlayToolBar()
 	string MenuItemImages[PLAY_ICON_COUNT];
 	
 	
-	MenuItemImages[PLAY_ICON_FIGCOLOR] = "images\\MenuIcons\\FIGURE_COLOR.jpg";
-	MenuItemImages[PLAY_ICON_BACKDRAW] = "images\\MenuIcons\\BACK_Draw.jpg";
-	MenuItemImages[PLAY_ICON_HIDE] = "images\\MenuIcons\\HideGraph.jpg";
+	MenuItemImages[PLAY_ICON_START] = "images\\MenuIcons\\start.jpg";
 	MenuItemImages[PLAY_ICON_SWITCH] = "images\\MenuIcons\\SWITCH.JPG";
 	MenuItemImages[PLAY_ICON_EXIT] = "images\\MenuIcons\\Menu_Exit.jpg";
 

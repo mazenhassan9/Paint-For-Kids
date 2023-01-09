@@ -32,7 +32,6 @@
 #include "operations/opStickimage.h"
 #include "operations/opSendBack.h"
 #include"opDublicateGraph.h"
-#include"operations/opHideGraph.h"
 #include"operations/OpUndo.h"
 #include"operations/OpRedo.h"
 //Constructor
@@ -166,12 +165,7 @@ operation* controller::createOperation(operationType OpType)
 		case STICK:
 			pOp = new opStickimage(this);
 			break;
-		case DUPLICATE_GRAPH:
-			pOp = new opDuplicateGraph(this);
-			break;
-		case HIDE_GRAPH://OpUnhide
-			pOp = new opHideGraph(this);
-			break;
+		
 
 		default:
 			if(pGUI->getInterfaceMode() == 0)

@@ -31,6 +31,5 @@ public:
 	virtual void Load(ifstream& Infile) ;	
 	virtual void RESIZE(double size) ;
 	virtual void stick(GUI* pUI)const;
-	virtual void DuplicateGraph();
 	virtual void setBorderwidth(double bw);
 };

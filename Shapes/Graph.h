@@ -53,8 +53,10 @@ public:
 	void SendBack(shape* pFig);
 	void HideAll(bool s);
 	void DuplicateGraph();
+	void ScrambleGraph();
 	bool UnHideone(int x, int y, GUI* pGUI);
 	int matchshapes();
+
 	//Redo Functions
 	void AddOperationUndo(operationType op);
 	operationType GetLastUndo();
