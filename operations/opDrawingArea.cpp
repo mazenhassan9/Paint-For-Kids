@@ -66,35 +66,27 @@ void opDrawingArea::Execute()
 
 		
 	}
-	//pUI->GetLastKey(key);
-	//cout << key << endl;
-	//if (key == 100) //"D" is press
-	//{
-	//	if (S2)
-	//	{
-	//		for (auto& itr : Shapes)
-	//		{
-	//			pGr->DeleteShape(itr);
-	//			pGr->Draw(pUI);
-	// Trial of Delete Operation (with D) key
-	//		}
-	//	}
-	//}
-	//pUI->KeyboardFlush();
 
 	
 		
-	
 
 	//Drag  Operation
 	
 	int refresh = 0; //to slow down the drawing. 
 	bool flag = pUI->GetMouseStatus(B1, P2.x, P2.y);
+	bool drag_operation = true;
 	while (flag)
 	{
 		S3 = pGr->Getshape(P2.x, P2.y);
+		
 		if (S3)
 		{
+			if (drag_operation)
+			{
+				pGr->AddOperation(DRAG);
+				pGr->AddModifiedShape(S3->Copy(), true);
+				drag_operation = false;
+			}
 			refresh++;
 			pGr->DeleteShape(S3);
 			

@@ -31,7 +31,6 @@
 #include"operations/OpCut.h"
 #include "operations/opStickimage.h"
 #include "operations/opSendBack.h"
-#include"opDublicateGraph.h"
 #include"operations/OpUndo.h"
 #include"operations/OpRedo.h"
 //Constructor
