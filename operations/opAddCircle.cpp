@@ -14,7 +14,7 @@ opAddCircle::~opAddCircle()
 void opAddCircle::Execute()
 {
 	//circle second trial 
-	Point P1, P2;
+	Point P1;
 	
 	//Get a Pointer to the Input / Output Interfaces
 	GUI* pUI = pControl->GetUI();
@@ -24,10 +24,12 @@ void opAddCircle::Execute()
 	pUI->GetPointClicked(P1.x, P1.y);
 
 	string msg = "First corner is at (" + to_string(P1.x) + ", " + to_string(P1.y) + " )";
-	msg += " ... Click at edge";
+	msg += " ... Enter the Radius of the Circle";
 	pUI->PrintMessage(msg);
 	//Read 2nd corner and store in point P2
-	pUI->GetPointClicked(P2.x, P2.y);
+	double radius = stod(pUI->GetSrting());
+	pUI->ClearStatusBar();
+
 	pUI->ClearStatusBar();
 
 	//Preapre all Circle parameters
@@ -44,7 +46,7 @@ void opAddCircle::Execute()
 
 
 	//Create a Circle with the above parameters
-	Circle* R = new Circle(P1, P2, CircleGfxInfo);
+	Circle* R = new Circle(P1, radius, CircleGfxInfo);
 
 	//Get a pointer to the graph
 	Graph* pGr = pControl->getGraph();

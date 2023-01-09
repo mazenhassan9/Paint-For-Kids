@@ -179,7 +179,7 @@ public:
 	// -- shapes Drawing functions
 	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo) const;  //Draw a rectangle
 	void DrawTri(Point P1, Point P2, Point p4, GfxInfo RectGfxInfo) const;
-	void DrawCir(Point center, Point edge, GfxInfo CircleGfxInfo) const; // Draw a Circle
+	void DrawCir(Point center, int radius, GfxInfo CircleGfxInfo) const; // Draw a Circle
 	void DrawSquare(Point P1, double sidelen, GfxInfo SquareGfxInfo) const; // Draw a square
 	void DrawLine(Point P1, Point P2, GfxInfo OvalGfxInfo) const;
 	void DrawPoly(vector<Point> Points, const int N , GfxInfo OvalGfxInfo) const;

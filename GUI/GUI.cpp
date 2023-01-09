@@ -534,11 +534,10 @@ void GUI::DrawTri(Point P1, Point P2, Point p3, GfxInfo RectGfxInfo) const {
 	
 }
 
-void GUI::DrawCir(Point center, Point edge, GfxInfo CircleGfxInfo) const
+void GUI::DrawCir(Point center, int radius, GfxInfo CircleGfxInfo) const
 {
 
 
-	int R = sqrt(pow(center.x - edge.x, 2) + pow(center.y - edge.y, 2)) / 2;
 	
 		color DrawingClr;
 		if (CircleGfxInfo.isSelected)	//shape is selected
@@ -561,7 +560,7 @@ void GUI::DrawCir(Point center, Point edge, GfxInfo CircleGfxInfo) const
 		else
 			style = FRAME;
 
-		pWind->DrawCircle(center.x, center.y, R, style);
+		pWind->DrawCircle(center.x, center.y, radius, style);
 		
 	
 }

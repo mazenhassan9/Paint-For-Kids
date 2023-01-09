@@ -7,10 +7,10 @@ class Circle : public shape
 {
 private:
 	Point center;
-	Point Corner;
+	int radius;
 public:
 	Circle();
-	Circle(Point, Point, GfxInfo shapeGfxInfo);
+	Circle(Point, int, GfxInfo shapeGfxInfo);
 	Circle(const Circle* lhs);
 
 	
