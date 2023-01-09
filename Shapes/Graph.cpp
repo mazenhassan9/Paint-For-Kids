@@ -159,7 +159,7 @@ vector<shape*> Graph::GetSelected()
 //Draw all shapes on the user interface
 void Graph::Draw(GUI* pUI) const
 {
-	int Img_width=62, Img_Height=100;
+	int Img_width=52, Img_Height=90;
 
 	string img = "images\\card.jpg";
 	Point P;

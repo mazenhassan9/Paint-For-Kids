@@ -17,8 +17,7 @@ opSwitch::~opSwitch()
 void opSwitch::Execute()
 {
 	GUI* pUI = pControl->GetUI();
-	
-	
+
 	int Mode = pUI->getInterfaceMode();
 	if (Mode)
 	{
