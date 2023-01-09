@@ -14,16 +14,23 @@ void opCut::Execute()
 {
 	Graph* pGr = pControl->getGraph();
 	GUI* pUI = pControl->GetUI();
+	vector<shape*> Shapes = pGr->GetSelected();
 	shape* S1 = pGr->GetLastSelected();
 
 	if (S1)
 	{
-		shape* S2 = S1->Copy();
-		pGr->setcopied(S2);
-		pGr->DeleteShape(S1);
+	
 
-		pUI->PrintMessage("Cut Operation, The Selected shape has been Cut");
+		for (auto& itr : Shapes)
+		{
+			shape* S2 = itr->Copy();
+			pGr->DeleteShape(itr);
+			pGr->setcopied(S2);
 
+		}
+
+
+		pUI->PrintMessage("Cut Operation, All Selected shapes has been Cut");
 
 	}
 	else

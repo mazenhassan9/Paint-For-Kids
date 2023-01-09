@@ -16,13 +16,18 @@ void opCopy::Execute()
 	Graph* pGr = pControl->getGraph();
 	GUI* pUI = pControl->GetUI();
 	shape* S1 = pGr->GetLastSelected();
-	
-	if (S1 )
+	vector<shape*> Shapes = pGr->GetSelected();
+	if (S1)
 	{
-		shape* S2 = S1->Copy();
-		pGr->setcopied(S2);
+		for (auto& itr : Shapes)
+		{
+			shape* S2 = itr->Copy();
+			pGr->setcopied(S2);
+
+		}
 		
-		pUI->PrintMessage("Copy Operation, The Selected shape has been copied");
+		
+		pUI->PrintMessage("Copy Operation, All Selected shapes has been copied");
 		
 
 	}

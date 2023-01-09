@@ -258,14 +258,19 @@ void Graph::load(ifstream& inputfile)
 	}
 }
 
-shape* Graph::getcopied() const
+vector<shape*> Graph::getcopied() const
 {
-	return copiedshape;
+	return copiedshapes;
+}
+
+void Graph::clearCopied()
+{
+	copiedshapes.clear();
 }
 
 void Graph::setcopied(shape* cs)
 {
-	copiedshape = cs;
+	copiedshapes.push_back(cs);
 }
 
 shape* Graph::GetLastDeleted() 

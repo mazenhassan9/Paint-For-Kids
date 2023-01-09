@@ -18,7 +18,7 @@ private:
 	vector<shape*> selectedShapes;	//pointer to the currently selected shape
 	vector<Group*> grouplist;
 	vector<operationType> operations; 
-	shape* copiedshape;
+	vector<shape*> copiedshapes;
 	vector<shape*>deletedShapes, modifiedShapes; 
 	//undo variables
 	vector<operationType> UndoOperations;
@@ -41,7 +41,8 @@ public:
 	vector <shape*> getlistofshspes();
 	void Save(ofstream& outfile);	//Save all shapes to a file
 	void load(ifstream& inputfile);	//Load all shapes from a file
-	shape* getcopied()const;
+	vector<shape*> getcopied()const;
+	void clearCopied();
 	void setcopied(shape* cs);
 	void mapshapes(GUI* pUI);
 	shape* GetLastSelected() const;

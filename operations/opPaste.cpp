@@ -14,15 +14,21 @@ void opPaste::Execute()
 {
 	Graph* pGr = pControl->getGraph();
 	GUI* pUI = pControl->GetUI();
-	shape* S1= pGr->getcopied();
+	vector<shape*> Shapes= pGr->getcopied();
 	Point P1;
 
-	pUI->PrintMessage("Paste operation : Click a point ");
-	pUI->GetPointClicked(P1.x , P1.y);
-	shape* S2 = S1->Copy();
-	S2->Move(P1.x, P1.y);
-	pGr->Addshape(S2);
-
+	int i = 0;
+	for (auto& itr : Shapes)
+	{
+		pUI->PrintMessage("Paste operation : Click a point "+to_string(i));
+		pUI->GetPointClicked(P1.x, P1.y);
+		shape* S2 = itr->Copy();
+		S2->Move(P1.x, P1.y);
+		pGr->Addshape(S2);
+		i++;
+	}
+	pUI->PrintMessage("Paste Operation, All Selected shapes has been pasted");
+	pGr->clearCopied();
 	
 
 }
