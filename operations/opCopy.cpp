@@ -17,6 +17,7 @@ void opCopy::Execute()
 	GUI* pUI = pControl->GetUI();
 	shape* S1 = pGr->GetLastSelected();
 	vector<shape*> Shapes = pGr->GetSelected();
+	pGr->clearCopied();
 	if (S1)
 	{
 		for (auto& itr : Shapes)

@@ -28,7 +28,7 @@ void opPaste::Execute()
 		i++;
 	}
 	pUI->PrintMessage("Paste Operation, All Selected shapes has been pasted");
-	pGr->clearCopied();
+	
 	
 
 }

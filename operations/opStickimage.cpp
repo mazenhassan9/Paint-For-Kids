@@ -28,7 +28,7 @@ void opStickimage::Execute()
 		}
 		
 
-		pUI->PrintMessage("Stick image to the selected shape");
+		pUI->PrintMessage("Sticked image to the selected shape");
 
 
 	}

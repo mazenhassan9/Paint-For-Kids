@@ -165,6 +165,7 @@ void Circle::mapshape(GUI* pUI)
 	pUI->Mapx(Corner.x);
 	pUI->Mapy(center.y);
 	pUI->Mapy(Corner.y);
+	radius = Corner.x - center.x;
 }
 
 

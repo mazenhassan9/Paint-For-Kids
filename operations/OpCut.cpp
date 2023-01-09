@@ -16,7 +16,7 @@ void opCut::Execute()
 	GUI* pUI = pControl->GetUI();
 	vector<shape*> Shapes = pGr->GetSelected();
 	shape* S1 = pGr->GetLastSelected();
-
+	pGr->clearCopied();
 	if (S1)
 	{
 	
