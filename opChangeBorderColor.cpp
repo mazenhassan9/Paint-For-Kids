@@ -15,7 +15,7 @@ opChangeBorderColor::~opChangeBorderColor()
 void opChangeBorderColor::Execute()
 {
 
-	Point P1;
+	
 	Graph* pGr = pControl->getGraph();
 	GUI* pUI = pControl->GetUI();
 	shape* bc = pGr->GetLastSelected();

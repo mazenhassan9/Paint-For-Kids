@@ -141,7 +141,6 @@ void Line::Load(ifstream& Infile)
 {
 
 	int D1, D2, D3;
-	int F1, F2, F3;
 
 	Infile >> ID >> P1.x >> P1.y >> P2.x >> P2.y;
 	Infile >> D1 >> D2 >> D3;

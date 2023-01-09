@@ -71,7 +71,7 @@ void Circle::Rotate()
 {
 
 	// get the center point location 
-	double x1, x2, y1, y2;
+	double x1, y1;
 	int centerx, centery;
 	centerx = center.x ;
 	centery = center.y ;

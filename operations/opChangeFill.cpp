@@ -14,7 +14,7 @@ opChangeFill::~opChangeFill()
 
 void opChangeFill::Execute()
 {
-	Point P1;
+	
 	Graph* pGr = pControl->getGraph();
 	GUI* pUI = pControl->GetUI();
 	shape* S1 = pGr->GetLastSelected();

@@ -14,7 +14,7 @@ opAddIrPoly::~opAddIrPoly()
 
 void opAddIrPoly::Execute()
 {
-	int side1,n;
+	int n;
 	Point P1;
 	vector <Point> Points;
 	// Get a Pointer to the Input / Output Interfaces

@@ -13,7 +13,7 @@ opAddSquare::~opAddSquare()
 //Execute the operation
 void opAddSquare::Execute()
 {
-	Point P1, P2;
+	Point P1;
 
 	//Get a Pointer to the Input / Output Interfaces
 	GUI* pUI = pControl->GetUI();

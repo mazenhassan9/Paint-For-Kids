@@ -17,7 +17,7 @@ void opAddPoly::Execute()
 {
 	const double PI = 3.1416;
 	int n , sideL;
-	double angle1;
+	
 	Point P1;
 	int x_C,y_C;
 	vector <Point> Points;
