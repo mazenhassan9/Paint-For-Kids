@@ -539,13 +539,15 @@ void Graph::AddModifiedShapeUndo(shape* pShp, bool s)
 void Graph::isalldone(GUI* pUI)
 {
 	int sx = 100;
-	int sy = 750;
-	int ex = 1300;
-	int ey = 1000;
+	int sy = 100;
+	int ex = 600;
+	int ey = 300;
 	
-	if (shapesList.empty())
+	if (shapesList.empty()&&score>0)
+	{
 		pUI->DrawImg("images\\MenuIcons\\congratulations.jpg", sx, sy, ex, ey);
-
+		Sleep(2000);
+	}
 }
 
 
