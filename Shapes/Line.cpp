@@ -172,7 +172,7 @@ void Line::mapshape(GUI* pUI)
 	pUI->Mapx(P1.x);
 	pUI->Mapx(P2.x);
 	pUI->Mapy(P1.y);
-	pUI->Mapy(P1.y);
+	pUI->Mapy(P2.y);
 
 	
 }
