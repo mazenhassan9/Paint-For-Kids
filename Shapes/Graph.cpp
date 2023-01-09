@@ -540,9 +540,11 @@ void Graph::isalldone(GUI* pUI)
 {
 	int sx = 100;
 	int sy = 750;
-	int Img_width = 62, Img_Height = 100;
+	int ex = 1300;
+	int ey = 1000;
+	
 	if (shapesList.empty())
-		pUI->DrawImg("images\\card.jpg", sx, sy, Img_width, Img_Height);
+		pUI->DrawImg("images\\MenuIcons\\congratulations.jpg", sx, sy, ex, ey);
 
 }
 
